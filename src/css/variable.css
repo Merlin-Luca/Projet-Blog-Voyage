@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../../font/static/Montserrat-SemiBold.ttf") format("truetype");
+    font-family: "Montserrat-Regular";
+    src: url("../../font/static/Montserrat-Regular.ttf") format("truetype");
+    font-family: "Montserrat-Light";
+    src: url("../../font/static/Montserrat-Light.ttf") format("truetype");
+    font-family: "Aladin";
+    src: url("../../font/Aladin-Regular.ttf") format("truetype");
+}
+
+:root {
+    --mainFont: "Montserrat-Regular";
+    --boldFont: "Montserrat-Bold";
+    --titleFont: "Aladin";
+    --navColor: #0b4747;
+    --backgroundColor : #D6D6D6;
+}

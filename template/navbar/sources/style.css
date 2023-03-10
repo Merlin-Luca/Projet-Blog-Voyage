@@ -1,0 +1,280 @@
+@import url(/Projet-Blog-Voyage/src/css/variable.css);
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* margin-top: 100px; */
+  overflow-x: hidden;
+  /* min-height: 100vh; */
+  position: relative;
+  background: #E0EAFC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* width: 100vw; */
+}
+
+nav {
+  position: fixed;
+  top: 0%;
+  z-index: 10000;
+  width: 100%;
+}
+
+.burger {
+  display: none;
+}
+
+nav>ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 20px;
+  background-color: #0a6363;
+  color: #d6d6d6;
+  text-shadow: 0 0 50px #001111;
+  border-bottom: 2px solid white;
+  position: relative;
+  height: 80px;
+}
+
+nav>ul>li>a {
+  text-decoration: none;
+  color: #d6d6d6;
+}
+
+.profilePicture {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-top: 5px;
+    height: 50px;
+}
+nav>ul>li>img {
+aspect-ratio: 1/1;
+border-radius: 50%;
+height: 50px;
+}
+nav>ul>li>a>img {
+  aspect-ratio: 1/1;
+  height: 125px;
+  margin-top: -25px;
+}
+
+.profile-nav {
+  position: relative;
+  margin-right: -30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+i {
+  margin-left: 5px
+}
+
+.hidden-nav {
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+  transition: all 0.5s ease;
+  top: 67px;
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  right: -200%;
+  /* animation: positionRetour 1s ease forwards; */
+}
+
+.hidden-nav>ul>li>a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--navColor);
+  transition: all 0.5s ease;
+}
+
+.hidden-nav>ul>li>a:hover {
+  color: black;
+}
+
+.hidden-nav>ul>li {
+  list-style-type: none;
+  padding: 3px 0px;
+}
+
+.hidden-nav>ul {
+  background-color: white;
+}
+
+.position {
+  transition: all 0.5s ease;
+  animation: positionAller 1s ease forwards;
+}
+
+@keyframes positionAller {
+  from {
+    right: -200%;
+  }
+
+  to {
+    right: 0%;
+  }
+
+}
+
+@keyframes positionRetour {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: -200%;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 1000px) {
+  .navtest {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+
+  /* BURGER */
+  .profil-burger>a {
+    color: white;
+  }
+
+  .menu-items>ul>li>img {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    height: 50px;
+  }
+
+  .navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(31, 63, 94, 0.678);
+  }
+
+  .nav-container {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 0px;
+  }
+
+  .navbar .menu-items {
+    display: flex;
+  }
+
+  .menu-items>ul>li {
+    margin-top: 75px;
+  }
+
+  .navbar .nav-container li {
+    list-style: none;
+  }
+
+  .navbar .nav-container a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500px;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .navbar .nav-container a:hover {
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 8px rgba(171, 180, 38, 0.733), 0 0 8px rgba(136, 148, 31, 0.788);
+    font-size: 1.5rem;
+  }
+
+  .nav-container .checkbox {
+    position: fixed;
+    display: block;
+    height: 30px;
+    width: 35px;
+    top: 25px;
+    left: 85%;
+    z-index: 9;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .nav-container .hamburger-lines {
+    background-color: white;
+    padding: 5px;
+    outline: solid;
+    outline-color: rgb(14, 13, 13);
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: fixed;
+    top: 25px;
+    left: 85%;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    z-index: 7;
+    padding-top: 50px;
+    background-color: rgb(46, 45, 45);
+    box-shadow: inset 0 0 20px rgb(2, 39, 19);
+    font-size: 10rem;
+    height: 100%;
+    width: 100%;
+    transform: translate(+150%);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.7s ease-in-out;
+    text-align: center;
+    position: fixed;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}

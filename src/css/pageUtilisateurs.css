@@ -1,0 +1,43 @@
+@import url("/Projet-Blog-Voyage/src/css/variable.css");
+.info_Profil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background-color: #d6d6d6;
+    border: 7px solid #0a6363;
+    padding: 5%;
+    border-radius: 30px;
+    margin-top: 2%;
+    font-family: var(--mainFont);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.utilisateurs{
+    position: absolute;
+    top: 2%;
+    left: 40%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+.utilisateurs > p{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.utilisateurs > img{
+    width: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 1000px) {
+    body{
+        margin-top: 55px;
+    }
+}

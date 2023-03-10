@@ -1,0 +1,49 @@
+.commentaires{
+    width: 100%;
+}
+.h1_commentaires{
+    margin-top: 10%;
+}
+#comm > textarea{
+    resize: none;
+    width: 100%;
+    background-color: #ece9e9;
+    border: 2px solid black;
+    padding: 5px;
+}
+#comm > input{
+    resize: none;
+    width: 100%;
+    background-color: #ece9e9;
+    border: 2px solid black;
+    margin-top: 3%;
+    padding: 5px;
+    cursor: pointer;
+}
+.commentaire{
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    margin: 2% 0;
+    padding: 5%;
+    width: 100%;
+}
+.comm{
+    width: 70%;
+    margin-left: 10%;
+}
+.utilisateur{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+.utilisateur > h4{
+    text-transform: uppercase;
+    padding: 5px;
+}
+.utilisateur > img{
+    width:50px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 2px solid black;
+} 
